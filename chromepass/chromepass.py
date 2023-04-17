@@ -5,7 +5,7 @@ import sqlite3
 import shutil
 from Crypto.Cipher import AES
 from Crypto.Protocol.KDF import scrypt
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timedelta
 
 def get_chrome_datetime(chrome_date):
     return datetime(1601, 1, 1) + timedelta(microseconds=chrome_date)
